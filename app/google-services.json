@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "63833289317",
+    "firebase_url": "https://smschool-14b4f.firebaseio.com",
+    "project_id": "smschool-14b4f",
+    "storage_bucket": "smschool-14b4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63833289317:android:2630998e8bec1481580c8c",
+        "android_client_info": {
+          "package_name": "com.example.smschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63833289317-f4ggqb4c4v9so85cr17v5mlgp0da386f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smschool",
+            "certificate_hash": "4d5fbf9a9a103f57a8580d4056763c3b2cf87751"
+          }
+        },
+        {
+          "client_id": "63833289317-6qb1gft3p1l2b7peeelfi71elkqnlogh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpdOACb5CAXnxI_eD75f838WReQiCMt_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63833289317-6qb1gft3p1l2b7peeelfi71elkqnlogh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
