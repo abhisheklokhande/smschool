@@ -11,10 +11,23 @@
         android:id="@+id/button"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="500dp"
+        android:background="@drawable/button"
+        android:text="LOGIN WITH FACEBOOK"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="560dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button"
         android:textColor="#ffffff"
         android:textStyle="bold"
-        android:text="LOGIN WITH FACEBOOK" />
+        android:text="LOGIN WITH GMAIL"
+        android:drawableStart="@drawable/googlelogo"
+        android:drawableLeft="@drawable/googlelogo" />
 </RelativeLayout>
