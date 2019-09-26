@@ -6,12 +6,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/performance_foreground"
+        android:icon="@drawable/schoollogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/performance_round"
+        android:roundIcon="@drawable/schoollogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feedback"></activity>
+        <activity android:name=".enter"></activity>
+        <activity android:name=".feedback" />
         <activity android:name=".aboutus" />
         <activity android:name=".performance" />
         <activity android:name=".events" />
