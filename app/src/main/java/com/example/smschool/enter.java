@@ -27,6 +27,6 @@ public class enter extends AppCompatActivity {
 
 
             }
-        },3000 );
+        },10000 );
     }
 }

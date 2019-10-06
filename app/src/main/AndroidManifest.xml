@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/schoollogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".enter"></activity>
+        <activity android:name=".forgetpassword"></activity>
+        <activity android:name=".registration" />
         <activity android:name=".feedback" />
         <activity android:name=".aboutus" />
         <activity android:name=".performance" />
@@ -30,7 +31,8 @@
         <activity android:name=".holidays" />
         <activity android:name=".dashboard" />
         <activity android:name=".profile" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".enter">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

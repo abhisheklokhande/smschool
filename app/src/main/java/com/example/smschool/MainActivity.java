@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -37,11 +39,16 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
+    EditText textmail, textpassword ;
+    Button btnlogin;
+
     private CallbackManager mCallbackManager;
     private FirebaseAuth mAuth;
 
     private Button mFacebookBtn;
     private Button signin;
+    private Button signup;
+    private Button forget;
     GoogleSignInClient mGoogleSignInClient;
     int RC_SIGN_IN = 0;
 
@@ -51,6 +58,72 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textmail = findViewById(R.id.editText);
+        textpassword = findViewById(R.id.editText2);
+        btnlogin = findViewById(R.id.button4);
+
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String email = textmail.getText().toString().trim();
+                String password = textpassword.getText().toString().trim();
+
+                if(TextUtils.isEmpty(email)) {
+                    Toast.makeText(MainActivity.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)) {
+                    Toast.makeText(MainActivity.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(password.length()<6) {
+                    Toast.makeText(MainActivity.this, "Password too short", Toast.LENGTH_SHORT).show();
+
+                }
+
+                mAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+
+                                    //startActivity(new Intent(getApplicationContext(),dashboard.class));
+                                    //Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                    checkEmailVerification();
+
+
+                                } else {
+
+                                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+
+                                }
+
+                                // ...
+                            }
+                        });
+            }
+        });
+
+        signup = (Button) findViewById(R.id.button5);
+        signup.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, registration.class);
+                startActivity(intent);
+            }
+        });
+
+        forget = (Button) findViewById(R.id.button6);
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, forgetpassword.class);
+                startActivity(intent);
+            }
+        });
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -205,6 +278,21 @@ public class MainActivity extends AppCompatActivity {
                         // ...
                     }
                 });
+    }
+
+
+    private void checkEmailVerification() {
+        FirebaseUser firebaseUser = mAuth.getInstance().getCurrentUser();
+        Boolean emailfalg = firebaseUser.isEmailVerified();
+
+        if(emailfalg) {
+            startActivity(new Intent(MainActivity.this, dashboard.class));
+        }
+        else {
+            Toast.makeText(this,"verify your email", Toast.LENGTH_SHORT).show();
+            mAuth.signOut();
+        }
+
     }
 
 
