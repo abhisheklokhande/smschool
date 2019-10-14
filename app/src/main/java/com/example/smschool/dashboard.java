@@ -142,5 +142,14 @@ public class dashboard extends AppCompatActivity {
             }
         });
 
+        image = (ImageButton) findViewById(R.id.imageButton22);
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, searching.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
