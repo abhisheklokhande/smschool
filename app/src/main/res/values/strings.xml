@@ -11,6 +11,7 @@
     <string name="action_settings">Emergency call</string>
 
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_retrievebus">Map</string>
 
 
 </resources>
