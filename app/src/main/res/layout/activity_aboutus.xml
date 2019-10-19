@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".aboutus">
 
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="420dp"
+        android:text="Android is no doubt the mostly used smartphone. So, that you can save time as much as possible and there will be no stress regarding your children. Our application is open source you can find the Github link below.
+                 Students and parents to check a student’s school career,attendance, performance, sending notifications and monitoring, at any time to be updated on all extracurricular activities such as social activities, sports activities, canteen food menù and bus tracking, online fee payment, E-learning. "
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

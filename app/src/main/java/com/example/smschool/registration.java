@@ -217,24 +217,26 @@ public class registration extends AppCompatActivity {
 
 
             private void sendEmailVerification() {
-             FirebaseUser firebaseUser = mAuth.getInstance().getCurrentUser();
-             if(firebaseUser!=null) {
-              firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-              @Override
-               public void onComplete(@NonNull Task<Void> task) {
-                 if(task.isSuccessful()) {
-                      Toast.makeText(registration.this, "Successfully Registered, Verification mail sent",Toast.LENGTH_SHORT).show();
-                      mAuth.signOut();
-                      finish();
-                       startActivity(new Intent(registration.this, MainActivity.class));
-                   }
-                  else {
-                      Toast.makeText(registration.this,"Verification mail has'nt been sent",Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
-    }
+               FirebaseUser firebaseUser = mAuth.getInstance().getCurrentUser();
+               if(firebaseUser!=null) {
+                  firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                     @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                           if(task.isSuccessful()) {
+                             Toast.makeText(registration.this, "Successfully Registered, " +
+                                      "Verification mail sent", Toast.LENGTH_SHORT).show();
+                                 mAuth.signOut();
+                                 finish();
+                                 startActivity(new Intent(registration.this, MainActivity.class));
+                           }
+                             else {
+                                  Toast.makeText(registration.this,"Verification mail has'nt been sent",
+                                  Toast.LENGTH_SHORT).show();
+                             }
+                        }
+                  });
+               }
+            }
 
     private void uploadImage() {
         if(filePath!=null) {

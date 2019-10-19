@@ -47,7 +47,7 @@ public class dashboard extends AppCompatActivity {
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(dashboard.this, bustrack.class);
+                Intent intent = new Intent(dashboard.this, MapsActivity.class);
                 startActivity(intent);
             }
         });

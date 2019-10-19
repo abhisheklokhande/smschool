@@ -10,9 +10,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Emergency call</string>
 
-    <string name="menu_home">Live Bus tracking</string>
-    <string name="menu_gallery">Emergency call</string>
-    <string name="menu_slideshow">Feedback</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>

@@ -44,12 +44,14 @@ public class forgetpassword extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()) {
-                                Toast.makeText(forgetpassword.this, "Link is send to your mail id to reset password", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(forgetpassword.this, "Link is send to your mail id to reset password",
+                                        Toast.LENGTH_SHORT).show();
                                 finish();
                                 startActivity(new Intent(forgetpassword.this, MainActivity.class));
                             }
                             else
-                                Toast.makeText(forgetpassword.this, "Error in sending password Reset", Toast.LENGTH_LONG).show();
+                                Toast.makeText(forgetpassword.this, "Error in sending password Reset",
+                                        Toast.LENGTH_LONG).show();
                         }
                     });
                 }
