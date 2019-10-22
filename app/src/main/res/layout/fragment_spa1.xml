@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".spa1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:background="@color/colorthree"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overview. Our General SPANISH
+and Intensive SPANISH courses
+are designed to help students
+make rapid progress in SAPNISH,
+and focus on the four key language
+skills – reading, writing, listening
+and speaking – with lots of additional
+work on vocabulary, grammar and pronunciation."
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:layout_marginLeft="130dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:background="@color/colorthree">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lectures,"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hours,"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROOM"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TUESDAY        10:00AM-12:00 AM
+                           FRIDAY            10:00 AM-12:00 AM"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:layout_marginLeft="130dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A2,ROOM"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="40dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorthree"
+        android:layout_marginTop="325dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANNOUCEMENT"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JUNE 20"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:layout_marginLeft="130dp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -15,6 +15,7 @@ public class bustrackinglive extends AppCompatActivity {
 
     private Button mbutton;
     private Button button;
+    private Button but;
     private ImageView imageView;
 
     @Override
@@ -25,6 +26,7 @@ public class bustrackinglive extends AppCompatActivity {
         mbutton = findViewById(R.id.button13);
         button = findViewById(R.id.button14);
         imageView = findViewById(R.id.imageView11);
+        but = findViewById(R.id.button16);
 
         mbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +39,13 @@ public class bustrackinglive extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(bustrackinglive.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(bustrackinglive.this, feedback.class);
                 startActivity(intent);
             }
         });

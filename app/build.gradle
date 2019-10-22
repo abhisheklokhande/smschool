@@ -32,10 +32,13 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'com.google.firebase:firebase-database:19.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'com.karumi:dexter:5.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.github.sujithkanna:smileyrating:1.6.8'
+    implementation 'me.biubiubiu.justifytext:library:1.1'
     testImplementation 'junit:junit:4.12'
     implementation 'com.facebook.android:facebook-login:[5,6)'
     implementation 'com.squareup.picasso:picasso:2.71828'
@@ -46,4 +49,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
+
 }

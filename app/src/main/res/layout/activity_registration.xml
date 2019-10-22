@@ -145,18 +145,20 @@
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView4"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
         app:layout_constraintBottom_toTopOf="@+id/editText16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/profile" />
+        android:src="@drawable/profile" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

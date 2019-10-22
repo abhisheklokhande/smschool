@@ -3,26 +3,53 @@ package com.example.smschool;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 
 public class dashboard extends AppCompatActivity {
 
     public ImageButton image;
+    private ImageView imageView;
+    private FirebaseAuth mAuth;
+    FirebaseDatabase firebaseDatabase;
+    FirebaseStorage firebaseStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        ImageButton image = (ImageButton) findViewById(R.id.imageButton18);
-        image.setOnClickListener(new View.OnClickListener() {
+        imageView = findViewById(R.id.imageView18);
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(dashboard.this, profile.class);
                 startActivity(intent);
+                mAuth = FirebaseAuth.getInstance();
+                firebaseDatabase = FirebaseDatabase.getInstance();
+                firebaseStorage = FirebaseStorage.getInstance();
+
+                DatabaseReference databaseReference = firebaseDatabase.getReference(mAuth.getUid());
+
+                StorageReference storageReference = firebaseStorage.getReference();
+                storageReference.child(mAuth.getUid()).child("images/profile pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Picasso.get().load(uri).fit().centerCrop().into(imageView);
+                    }
+                });
             }
         });
 
