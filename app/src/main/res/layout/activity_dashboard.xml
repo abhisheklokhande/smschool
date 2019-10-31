@@ -106,19 +106,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/foodmenu" />
 
-    <ImageButton
-        android:id="@+id/imageButton14"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="176dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/performance" />
 
     <ImageButton
         android:id="@+id/imageButton15"
@@ -327,20 +314,7 @@
         app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="100dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="172dp"
-        android:text="Performance"
-        android:textAlignment="center"
-        android:textColor="#050404"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/textView23"
@@ -393,13 +367,13 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="172dp"
         android:text="Google search"
         android:textAlignment="center"
         android:textColor="#050404"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
@@ -418,15 +392,15 @@
 
     <ImageButton
         android:id="@+id/imageButton22"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="195dp"
         android:background="@drawable/chrome2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
