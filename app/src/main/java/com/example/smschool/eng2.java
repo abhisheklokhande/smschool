@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -40,6 +42,8 @@ public class eng2 extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private Button button;
+    private Button button2;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -84,7 +88,27 @@ public class eng2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_eng2, container, false);
+        View v = inflater.inflate(R.layout.fragment_eng2, container, false);
+
+        button = v.findViewById(R.id.button28);
+        button2 = v.findViewById(R.id.button29);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),engupload.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),engviewfile.class);
+                startActivity(intent);
+            }
+        });
+
+        return v;
     }
 
 

@@ -6,9 +6,17 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
@@ -24,6 +32,12 @@ public class soc4 extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+    FirebaseAuth mAuth;
+    private EditText posttext, descriptiontext;
+    private Button button;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -66,7 +80,34 @@ public class soc4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_soc4, container, false);
+        View v = inflater.inflate(R.layout.fragment_soc4, container, false);
+
+        posttext = v.findViewById(R.id.editText28);
+        descriptiontext = v.findViewById(R.id.editText29);
+        button = v.findViewById(R.id.button27);
+        mAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference(mAuth.getUid()).child("Social");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String writepost = posttext.getText().toString();
+                String subandtopic = descriptiontext.getText().toString();
+
+                if(!TextUtils.isEmpty(writepost)) {
+                    databaseReference.push().getKey();
+
+                    sochelper sochelper = new sochelper(writepost, subandtopic);
+                    databaseReference.setValue(sochelper);
+
+                    Toast.makeText(getActivity(),"your response has been submitted",Toast.LENGTH_SHORT).show();
+
+                }else {
+                    Toast.makeText(getActivity(),"enter the description",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

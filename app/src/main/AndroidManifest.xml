@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smschool">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -13,7 +12,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/schoollog"
@@ -21,19 +19,26 @@
         android:roundIcon="@drawable/schoollog"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service
-            android:name=".GettingDeviceTokenService">
+        <activity android:name=".matupload"/>
+        <activity android:name=".spaviewfile" />
+        <activity android:name=".spaupload" />
+        <activity android:name=".sciviewfile" />
+        <activity android:name=".sciupload" />
+        <activity android:name=".socviewfile" />
+        <activity android:name=".socupload" />
+        <activity android:name=".matviewfile" />
+        <activity android:name=".engviewfile" />
+        <activity android:name=".engupload" />
+
+        <service android:name=".GettingDeviceTokenService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
-
-
         </service>
-        <service
-            android:name=".MyFirebaseMessagingService">
-        <intent-filter>
-            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-        </intent-filter>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
         </service>
 
         <activity android:name=".PaymentDetails" />
