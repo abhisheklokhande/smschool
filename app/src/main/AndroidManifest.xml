@@ -19,7 +19,8 @@
         android:roundIcon="@drawable/schoollog"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".examactivity"></activity>
+        <activity android:name=".holidayslist"></activity>
+        <activity android:name=".examactivity" />
         <activity android:name=".matupload" />
         <activity android:name=".spaviewfile" />
         <activity android:name=".spaupload" />
@@ -31,12 +32,12 @@
         <activity android:name=".engviewfile" />
         <activity android:name=".engupload" />
 
-        <meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat_name" />
-
-        <meta-data android:name="com.google.firebase.messaging.default_notification_color"
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
-
 
         <service android:name=".GettingDeviceTokenService">
             <intent-filter>
