@@ -3,8 +3,10 @@ package com.example.smschool;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.ImageView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -17,33 +19,40 @@ import com.squareup.picasso.Picasso;
 public class fee extends AppCompatActivity {
 
     private ImageView imageView;
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference = firebaseDatabase.getReference().child("Bus fee");
-
+    private ImageView image;
+    private ImageView imagev;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fee);
             imageView = findViewById(R.id.imageView19);
-
-        }
-
-        @Override
-        protected void onStart() {
-            super.onStart();
-            databaseReference.addValueEventListener(new ValueEventListener() {
+            image = findViewById(R.id.imageView53);
+            imagev = findViewById(R.id.imageView54);
+            imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    String link = dataSnapshot.getValue(String.class);
-                    Picasso.get().load(link).into(imageView);
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                public void onClick(View v) {
+                    Intent intent = new Intent(fee.this,amount.class);
+                    startActivity(intent);
                 }
             });
+            image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(fee.this,amount.class);
+                    startActivity(intent);
+                }
+            });
+            imagev.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(fee.this,amount.class);
+                    startActivity(intent);
+                }
+            });
+
+
+
         }
 }
 

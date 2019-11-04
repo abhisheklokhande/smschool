@@ -35,13 +35,34 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp">
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:id="@+id/imageView19"
             android:layout_marginTop="100dp"
-            android:layout_marginLeft="20dp">
-
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/schoolbuz">
         </ImageView>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView53"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="220dp"
+            android:background="@drawable/feez">
+        </ImageView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/paymentz"
+            android:layout_centerInParent="true"
+            android:id="@+id/imageView54">
+        </ImageView>
+
     </RelativeLayout>
 
 </RelativeLayout>

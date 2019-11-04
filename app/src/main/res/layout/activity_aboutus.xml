@@ -53,7 +53,7 @@
             android:text="       Android is no doubt the mostly used smartphone. So, that you can save time as much as possible and there will be no stress regarding your children. Our application is open source you can find the Github link below.
          \n\n        Students and parents to check a student’s school career,attendance, sending notifications and monitoring, at any time to be updated on all extracurricular activities such as social activities, sports activities, canteen food menù and bus tracking, online fee payment,E-learning."
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
